@@ -15,7 +15,7 @@
     <?= isset($css) ? $css : '' ?>
 
     <link rel="icon" type="image/x-icon" href="<?= isset($favicon) ? $favicon : "" ?>">
-    <title><?= isset($title) ? $title : ($lang == 'id' ? 'Beranda' : 'Home')  ?></title>
+    <title><?= isset($title) ? $title : (isset($lang) && $lang == 'id' ? 'Beranda' : 'Home')  ?></title>
 </head>
 
 <?= $this->renderSection('content'); ?>
